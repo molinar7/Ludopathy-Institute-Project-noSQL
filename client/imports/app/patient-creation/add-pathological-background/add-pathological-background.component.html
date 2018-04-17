@@ -1,0 +1,242 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+        
+            <form [formGroup]="addForm" (ngSubmit)="addPathologicalBackground()"  class="col-12" method="post">
+        
+                <h1>Registrar Antecedentes Personales Patológicos y no Patológicos</h1>
+        
+                <div class='row'>
+                    <div class='col-12'>
+                    </div>
+                </div>
+                        
+                <!--Antecedentes Personales Patológicos y no Patológicos-->
+                <div class="row form-group">
+                    <div class='input-field col-12 left-align'>
+                    <h4 class="text-info">En caso afirmativo propocione detlles pertinentes (fechas, gravedad, evolución, localización y tratamientos)</h4>
+                </div>
+        
+                <div class="col-12 row form-group">
+                    <div class='input-field col-6 left-align'>
+                        <h4 class="text-info" for="snc">Del Sistema Nervioso Central</h4>
+                        <input type="text" class="validate text-info form-control" name="snc" id="snc" formControlName="snc">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="musculo_esqueleticas">Músculo-esqueléticas</h4>
+                        <input type="text" class="validate text-info form-control" name="musculo_esqueleticas" id="musculo_esqueleticas" formControlName="musculo_esqueleticas">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="trastornos_convulsivos">Trastornos convulsivos</h4>
+                        <input type="text" class="validate text-info form-control" name="trastornos_convulsivos" id="trastornos_convulsivos" formControlName="trastornos_convulsivos">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="endocrinas_metabolicas">Endocrinas/metabólicas</h4>
+                        <input type="text" class="validate text-info form-control" name="endocrinas_metabolicas" id="endocrinas_metabolicas" formControlName="endocrinas_metabolicas">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="respiratorias">Respiratorias</h4>
+                        <input type="text" class="validate text-info form-control" name="respiratorias" id="respiratorias" formControlName="respiratorias">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="gastrointestinales">Gastrointestinales</h4>
+                        <input type="text" class="validate text-info form-control" name="gastrointestinales" id="gastrointestinales" formControlName="gastrointestinales">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="cardiovasculares">Cardiovasculares</h4>
+                        <input type="text" class="validate text-info form-control" name="cardiovasculares" id="cardiovasculares" formControlName="cardiovasculares">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="renales_genitourinarias">Renales/genitourinarias</h4>
+                        <input type="text" class="validate text-info form-control" name="renales_genitourinarias" id="renales_genitourinarias" formControlName="renales_genitourinarias">
+                    </div>
+                </div> 
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="hematopoyecticas_linfaticas">Hematopoyéticas/linfáticas</h4>
+                        <input type="text" class="validate text-info form-control" name="hematopoyecticas_linfaticas" id="hematopoyecticas_linfaticas" formControlName="hematopoyecticas_linfaticas">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="cancer">Cáncer</h4>
+                        <input type="text" class="validate text-info form-control" name="cancer" id="cancer" formControlName="cancer">
+                    </div>
+                </div> 
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="ojos_nariz_oidos_garganta">De ojos/oídos/nariz/garganta</h4>
+                        <input type="text" class="validate text-info form-control" name="ojos_nariz_oidos_garganta" id="ojos_nariz_oidos_garganta" formControlName="ojos_nariz_oidos_garganta">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="alergia_hipersensibilidad_a_medicamentos">Alergia o hipersensibilidad a medicamentos</h4>
+                        <input type="text" class="validate text-info form-control" name="alergia_hipersensibilidad_a_medicamentos" id="alergia_hipersensibilidad_a_medicamentos" formControlName="alergia_hipersensibilidad_a_medicamentos">
+                    </div>
+                </div> 
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="hepaticas">Hepáticas</h4>
+                        <input type="text" class="validate text-info form-control" name="hepaticas" id="hepaticas" formControlName="hepaticas">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="intervenciones_quirurgicas_mayores">Intervenciones quirúrgicas mayores</h4>
+                        <input type="text" class="validate text-info form-control" name="intervenciones_quirurgicas_mayores" id="intervenciones_quirurgicas_mayores" formControlName="intervenciones_quirurgicas_mayores">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="dermatologicas_tejido_conectivo">Dermatológicas/del tejido conectivo</h4>
+                        <input type="text" class="validate text-info form-control" name="dermatologicas_tejido_conectivo" id="dermatologicas_tejido_conectivo" formControlName="dermatologicas_tejido_conectivo">
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="otros">Otro</h4>
+                        <input type="text" class="validate text-info form-control" name="otros" id="otros" formControlName="otros">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-12 left-align">
+                        <h4 class="text-info" for="notas_antecedentes_personales_patologicos_y_no_patologicos">Notas de antecedentes personales patológicos y no patológicos</h4>
+                        <textarea type="text" class="validate text-info form-control" rows="10" name="notas_antecedentes_personales_patologicos_y_no_patologicos" id="notas_antecedentes_personales_patologicos_y_no_patologicos" formControlName="notas_antecedentes_personales_patologicos_y_no_patologicos">
+                        </textarea>
+                    </div>
+                </div> 
+                
+                <h4>Información adicional</h4>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="toma_cafe">¿Toma café o té negro?</h4>
+                        <select class="custom-select col-md-6" name='toma_cafe' id='toma_cafe' formControlName="toma_cafe">
+                            <option default value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="tazas_de_cafe">No. de tazas al día</h4>
+                        <input type="number" class="validate text-info form-control" name="tazas_de_cafe" id="tazas_de_cafe" formControlName="tazas_de_cafe" min="0">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="tabaquismo">Tabaquismo</h4>
+                        <select class="custom-select col-md-6" name='tabaquismo' id='tabaquismo' formControlName="tabaquismo">
+                            <option default value="No fumador">No fumador</option>
+                            <option value="Ocasional">Ocasional</option>
+                            <option value="Leve">Leve</option>
+                            <option value="Moderado">Moderado</option>
+                            <option value="Alto">Alto</option>
+                        </select>
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="consumo_diario_tabaco">Consumo diario</h4>
+                        <input type="number" class="validate text-info form-control" name="consumo_diario_tabaco" id="consumo_diario_tabaco" formControlName="consumo_diario_tabaco" min="0">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-4 left-align">
+                        <h4 class="text-info" for="anos_tabaquismo">Años de tabaquismo</h4>
+                        <input type="number" class="validate text-info form-control" name="anos_tabaquismo" id="anos_tabaquismo" formControlName="anos_tabaquismo" min="0">
+                    </div>
+                            
+                    <div class="input-field col-4 left-align">
+                        <h4 class="text-info" for="edad_inicio">Edad de inicio</h4>
+                        <input type="number" class="validate text-info form-control" name="edad_inicio" id="edad_inicio" formControlName="edad_inicio" min="0">
+                    </div>
+                    <div class="input-field col-4 left-align">
+                        <h4 class="text-info" for="edad_suspension">Edad en que se suspendió</h4>
+                        <input type="number" class="validate text-info form-control" name="edad_suspension" id="edad_suspension" formControlName="edad_suspension" min="0">
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="bebidas_alcoholicas">Bebidas alcohólicas</h4>
+                        <select class="custom-select col-md-6" name='bebidas_alcoholicas' id='bebidas_alcoholicas' formControlName="bebidas_alcoholicas">
+                            <option default value="Nunca">Nunca</option>
+                            <option value="Una vez al mes o menos">Una vez al mes o menos</option>
+                            <option value="Entre dos y cuatro veces al mes">Entre dos y cuatro veces al mes</option>
+                            <option value="Entre dos y tres veces por semana">Entre dos y tres veces por semana</option>
+                            <option value="Cuatro o más veces por semana">Cuatro o más veces por semana</option>            
+                        </select>
+                    </div>
+                            
+                    <div class="input-field col-6 left-align">
+                        <h4 class="text-info" for="frecuencia_y_cantidad">Frecuencia y cantidad (cuando toma)</h4>
+                        <select class="custom-select col-md-6" name='frecuencia_y_cantidad' id='frecuencia_y_cantidad' formControlName="frecuencia_y_cantidad">
+                            <option default value="Ninguna">Ninguna</option>
+                            <option value="Uno o dos">Uno o dos</option>
+                            <option value="Tres o cuatro">Tres o cuatro</option>
+                            <option value="Cinco o seis">Cinco o seis</option>
+                            <option value="Siete o nueve">Siete o nueve</option>
+                            <option value="Diez o mas">Diez o más</option>               
+                        </select>
+                    </div>
+                </div>
+                
+                <h4>Si tiene usted dudas sobre alcoholismo pregunte (CAGE modificado).</h4>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-12 left-align">
+                        <h4 class="text-info" for="sintio_dejar_de_tomar">¿Alguna vez le dijeron o sintió que debería dejar de tomar?</h4>
+                        <select class="custom-select col-md-4" name='sintio_dejar_de_tomar' id='sintio_dejar_de_tomar' formControlName="sintio_dejar_de_tomar">
+                            <option default value="Si">Si</option>
+                            <option value="No">No</option>              
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-12 left-align">
+                        <h4 class="text-info" for="sintio_culpable_forma_tomar">¿Alguna vez se sintió mal o culpable por su forma de tomar?</h4>
+                        <select class="custom-select col-md-4" name='sintio_culpable_forma_tomar' id='sintio_culpable_forma_tomar' formControlName="sintio_culpable_forma_tomar">
+                            <option default value="Si">Si</option>
+                            <option value="No">No</option>              
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 row form-group">
+                    <div class="input-field col-12 left-align">
+                        <h4 class="text-info" for="calmar_nervios_cortar_cruda">¿Alguna vez tomó en la mañana para calmar sus nervios o cortar la cruda?</h4>
+                        <select class="custom-select col-md-4" name='calmar_nervios_cortar_cruda' id='calmar_nervios_cortar_cruda' formControlName="calmar_nervios_cortar_cruda">
+                            <option default value="Si">Si</option>
+                            <option value="No">No</option>              
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- Botones -->
+                <div class='col-12 row'>
+                    <div class="col-6 float-left">
+                        <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' [routerLink]="['/paciente', patient._id]"> Cancelar </button>
+                    </div>
+                    <div class="col-6 float-right">
+                        <button name='btn_login' id="btn_login" class='col-12 btn btn-info text-light' type="submit"> Registrar </button>
+                    </div>
+        
+                </div>
+            </form>
+        
+        </div>

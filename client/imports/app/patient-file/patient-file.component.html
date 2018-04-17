@@ -1,0 +1,119 @@
+<div class="container" style="padding-top: 25px; padding-bottom: 25px;">
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					Información del paciente: {{patientId}}
+				</div>
+				<div class="card-block">
+					<blockquote class="card-blockquote">
+						<div class="row" style="padding: 5px;">
+							<div class="col-2">
+								<img *ngIf="patient?.datos_personales.sexo == 'Masculino'" src="img/male.png" alt="" class="rounded-0" style="height: 180px; width: 180px;">
+								<img *ngIf="patient?.datos_personales.sexo == 'Femenino'" src="img/female.png" alt="" class="rounded-0" style="height: 180px; width: 180px;">
+							</div>
+							<div class="col-10">
+								<div class="row">
+									<div class='input-field col-4 left-align'>
+										<h4 class="text-info" for="name">Nombre(s)</h4>
+										<input placeholder="Nombre(s)" class='validate text-info form-control' type='text' name='name' id='name' value="{{ patient?.datos_personales?.nombre }}"
+										 disabled/>
+									</div>
+									<div class='input-field col-4 left-align'>
+										<h4 class="text-info" for="apellido1">Apellido Paterno</h4>
+										<input placeholder="Apellido Paterno" class='validate text-info form-control' type='text' name='apellido1' id='apellido1'
+										 value="{{ patient?.datos_personales?.apellido_paterno }}" disabled/>
+									</div>
+									<div class='input-field col-4 left-align'>
+										<h4 class="text-info" for="apellido2">Apellido Materno</h4>
+										<input placeholder="Apellido Materno" class='validate text-info form-control' type='text' name='apellido2' id='apellido2'
+										 value="{{ patient?.datos_personales?.apellido_materno }}" disabled/>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class='input-field col-12 left-align'>
+										<h4 class="text-info" for="motivo">Motivo de Consulta</h4>
+										<textarea class="col-12 text-info" name="motivo" id="motivo" disabled>{{ patient?.datos_personales?.motivo_consulta}}</textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="padding-top: 25px;">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					Expediente del paciente
+					<a>
+						<a [routerLink]="['/resumen', patient._id]" >
+						<button type="button" class="btn btn-outline-info float-right col-2">Ver Resumen</button>
+					</a>
+				</div>
+				<div class="card-block">
+					<blockquote class="card-blockquote">
+						<div class="row" style="padding: 5px;">
+							<div class="col-3">
+								<a>
+								<a [routerLink]="['/datos-historia', patient._id]">
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.historia_psicosocial_lleno}">Historia Psicosocial</button>
+								</a>
+							</div>
+							<div class="col-3">
+								<a [routerLink]="['/datos-demograficos', patient._id]">
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.datos_demograficos_lleno}">Datos Demográficos</button>
+								</a>
+							</div>
+							<div class="col-3">
+								<a [routerLink]="['/datos-episodio-actual', patient._id]" >
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.episodio_actual_lleno}">Episodio Actual</button>
+								</a>
+							</div>
+							<div class="col-3">
+								<a [routerLink]="['/datos-examen-mental', patient._id]">   
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.examen_mental_lleno}">Examen Mental</button>
+								</a>
+							</div>
+						</div>
+
+						<div class="row" style="padding: 5px;">
+							<div class="col-3">
+								<a[routerLink]="['/datos-diagnostico-tratamiento', patient._id]" >
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.diagnostico_tratamiento_lleno}">Diagnóstico de Tratamiento</button>
+								</a>
+							</div>
+							<div class="col-3">
+								<a [routerLink]="['/datos-antecedentes-patologicos', patient._id]" >
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.antecedentes_patologicos_lleno}">Antecedentes Patológicos</button>
+								</a>
+							</div>
+							<div class="col-3">
+								<a>
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.historia_psiquiatrica_lleno}">Historia Psiquiátrica</button>
+								</a>
+							</div>
+							<div class="col-3">
+								<a [routerLink]="['/datos-abuso-sustancias', patient._id]" >
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.abuso_substancias_lleno}">Abuso de Substancias</button>		
+								</a>
+							</div>
+						</div>
+
+						<div class="row" style="padding: 5px;">
+							<div class="col-3">
+								<a [routerLink]="['/datos-gineco-obstetricos', patient._id]" >
+									<button type="button" class="btn btn-info col-12" [ngClass]="{'btn-danger': !this.patient.antecedentes_ginecoobstetricos_lleno}">Datos Gineco-Obstétricos</button>
+								</a>
+							</div>
+						</div>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

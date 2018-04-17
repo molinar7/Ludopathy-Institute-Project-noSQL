@@ -1,0 +1,85 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+        <form [formGroup]="addForm" (ngSubmit)="addDiagnosticoTratamiento()"  class="col-12" method="post">
+    
+       
+    
+            <h2>Diagnóstico</h2>
+    
+            <!--Diagnostico Primario-->
+            <div class='row form-group'>
+                <div class='input-field col-12 left-align'>
+                    <h4 class="text-info" for="motivo"><br>Primario</h4>
+                    <textarea class="col-12 text-secundary" id="diagnostico1" cols="30" rows="5" formControlName="primario"></textarea>
+                </div>
+            </div>
+    
+            <!--Diagnostico secundario-->
+            <div class='row form-group'>
+                <div class='input-field col-12 left-align'>
+                    <h4 class="text-info" for="motivo">Secundario</h4>
+                    <textarea class="col-12 text-secundary"  id="diagnostico2" cols="30" rows="5" formControlName="secundario"></textarea>
+                </div>
+            </div>
+    
+            <h2>Plan de Tratamiento</h2>
+    
+            <!--Plan de Tratamiento-->
+            <div class='row form-group'>
+                <div class='input-field col-6 left-align'>
+                    <h4 class="text-info" for="name"><br>Seguimiento Farmacólogico</h4>
+                    <input class='text-secondary form-control' type='text'  id='seguimiento-farmacologico' formControlName="seguimiento_farmacologico"
+                    />
+                </div>
+                <div class='input-field col-6 left-align'>
+                    <h4 class="text-info" for="apellido1"><br>Modalidad Terapéutica</h4>
+                    <input  class=' text-secondary form-control' type='text'  id='modalidad-terapeutica'
+                        formControlName="modalidad_terapeutica" />
+                </div>
+            </div>
+    
+             <!--Pronostico-->
+             <div class='row form-group'>
+                <div class='input-field col-12 left-align'>
+                    <h4 class="text-info" for="motivo"> Pronóstico:</h4>
+                    <textarea class="col-12 text-secundary" id="pronostico" cols="30" rows="5" formControlName="pronostico"></textarea>
+                </div>
+            </div>
+    
+           
+    
+            <!--Evaluador-->
+            <h2>Evaluador</h2>
+            <div class='row form-group'>
+                    <div class='input-field col-4 left-align'>
+                        <h4 class="text-info" for="direccion"><br>Nombre</h4>
+                        <input placeholder="Nombre" class='validate text-info form-control' type='text' id='evaluador_name' formControlName="evaluador_nombre"/>
+                    </div>
+                    <div class='input-field col-4 left-align'>
+                        <h4 class="text-info" for="telefono"><br>Categoría</h4>
+                        <input  class='text-info form-control' type='text' id='evaluador_cat' formControlName="evaluador_categoria"/>
+                    </div>
+                    <div class='input-field col-4 left-align'>
+                        <h4 class="text-info" for="fechanac"><br>Firma</h4>
+                        <input class='validate text-info form-control' type='text' id='evaluador_firm'formControlName="evaluador_firma" />
+                    </div>
+                </div>
+    
+            <!-- Botones -->
+            <div class='row'>
+                <div class="col-6 float-left">
+                    <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' (click)="cancel()">
+                        Cancelar
+            </button>
+                </div>
+    
+    
+                <div class="col-6 float-right">
+                    <button  id="btn_continuar" class='col-12 btn btn-info text-light' type="submit">
+                                Continuar
+                     </button>
+                </div>
+    
+            </div>
+        </form>
+    
+    </div>

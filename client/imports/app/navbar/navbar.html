@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand" href="#">
+        <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top text-light" alt="">
+        <span *ngIf="!isLoggedIn" class="text-light">Instituto de Investigación y Tratamiento de Ludopatía</span>
+    </a>
+
+    <ul class="navbar-nav" *ngIf="isLoggedIn">
+        <li class="nav-item">
+            <a class="nav-link text-light" (click)="homePage()">Inicio
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" (click)="changePassword()">Cambiar contraseña
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" (click)="logout()">Cerrar sesión
+            </a>
+        </li>
+        <!--<li class="nav-item dropdown" dropdown>
+            <a href dropdownToggle (click)="false" class="nav-link dropdown-toggle text-light" aria-haspopup="true" aria-expanded="false">Cuenta</a>
+            <div *dropdownMenu class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-info" (click)="changePassword()">Cambiar contraseña</a>
+                <a class="dropdown-item text-info" (click)="logout()">Cerrar sesión</a>
+            </div>
+        </li>-->
+    </ul>
+</nav>

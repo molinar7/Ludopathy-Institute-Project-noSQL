@@ -1,0 +1,74 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+
+    <form [formGroup]="addForm" (ngSubmit)="addDemographic()"  class="col-12" method="post">
+
+        <h1>Registrar Datos Demográficos</h1>
+
+        <div class='row'>
+            <div class='col-12'>
+            </div>
+        </div>
+				
+		<!--Datos Demograficos-->
+		<div class="row form-group">
+			<div class='input-field col-4 left-align'>
+            <h4 class="text-info" for="marital_status">Estado Civil</h4>
+            <select class="custom-select col-4" name='estado_civil' id='estado_civil' formControlName="estado_civil">
+              <option default value="soltero">Soltero</option>
+              <option value="casado">Casado</option>
+              <option value="separado">Separado</option>
+              <option value="divorciado">Divorciado</option>
+              <option value="viudo">Viudo</option>
+              <option value="union_libre">Unión libre</option>
+            </select>
+        	</div>
+        	<div class="input-field col-4 left-align">
+				<h4 class="text-info" for="religion">Religión</h4>
+					<input type="text" class="validate text-info form-control" name="religion" id="religion" formControlName="religion">
+			</div>
+			<div class="input-field col-4 left-align">
+				<h4 class="text-info" for="escolaridad">Escolaridad</h4>
+				<input type="text" class="validate text-info form-control" name="escolaridad" id="escolaridad" formControlName="escolaridad">
+			</div>
+		</div>
+
+		<div class="row form-group">
+        	<div class='input-field col-4 left-align'>
+                <h4 class="text-info" for="sustento_familiar">Sustento Familiar</h4>
+                <select class="custom-select col-4" name='sustento_familiar' id='sustento_familiar' formControlName="sustento_familiar">
+                    <option selected value="Paciente">Paciente</option>
+                    <option value="Igualmente compartido">Igualmente Compartido</option>
+                    <option value="Hermano">Hermano</option>
+                    <option value="Compañero de cuarto">Compañero de Cuarto</option>
+                    <option value="Cónyuge">Cónyuge</option>
+                    <option value="Padres">Padres</option>
+                    <option value="Parientes">Parientes</option>
+                    <option value="Pensión">Pensión</option>
+                    <option value="Otro">Otro</option>
+                </select>
+        	</div>
+					
+			<div class="input-field col-4 left-align">
+				<h4 class="text-info" for="ocupacion_jefe_familia">Ocupación Jefe de Familia</h4>
+				<input type="text" class="validate text-info form-control" name="ocupacion_jefe_familia" id="ocupacion_jefe_familia" formControlName="ocupacion_jefe_familia">
+			</div>
+
+			<div class="input-field col-4 left-align">
+				<h4 class="text-info" for="ocupacion_paciente">Ocupación Paciente</h4>
+				<input type="text" class="validate text-info form-control" name="ocupacion_paciente" id="ocupacion_paciente" formControlName="ocupacion_paciente">
+			</div>
+		</div> 
+
+        <!-- Botones -->
+        <div class='row'>
+            <div class="col-6 float-left">
+                <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' [routerLink]="['/paciente', patient._id]"> Cancelar </button>
+            </div>
+            <div class="col-6 float-right">
+                <button name='btn_login' id="btn_login" class='col-12 btn btn-info text-light' type="submit"> Registrar </button>
+            </div>
+
+        </div>
+    </form>
+
+</div>

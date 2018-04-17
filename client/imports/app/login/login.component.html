@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center" style="padding-top:150px;">
+        <div class="z-depth-1 grey lighten-3 row bg-light" style="padding: 32px 48px 32px 48px; border: 1px solid #EEE; min-width:300px; max-width:500px;">
+
+            <form [formGroup]="loginForm" class="col-12" method="post" (ngSubmit)="submit(loginForm)">
+
+                <h4 class="text-info text-center">Instituto de Investigación y Tratamiento de Ludopatía</h4>
+
+                <div class='row'>
+                    <div class='col-12'>
+                    </div>
+                </div>
+
+                <div class='row form-group'>
+                    <div class='input-field col-12 left-align'>
+                        <input placeholder="Correo electrónico" class='validate text-info form-control' type='text' name='email' id='email' formControlName="email"
+                            [ngClass]="{'is-invalid':loginForm.get('email').hasError('required') && loginForm.get('email').touched}"
+                        />
+                    </div>
+                </div>
+
+                <div class='row form-group'>
+                    <div class='input-field col-12 left-align'>
+                        <input placeholder="Contraseña" class='validate text-info form-control' type='password' name='password' id='password' formControlName="password"
+                            [ngClass]="{'is-invalid':loginForm.get('password').hasError('required') && loginForm.get('password').touched}"
+                        />
+                    </div>
+                </div>
+
+                <div class='row form-group'>
+                    <button name='btn_login' id="btn_login" class='col-12 btn btn-info text-light' type="submit">
+                        Iniciar Sesión
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

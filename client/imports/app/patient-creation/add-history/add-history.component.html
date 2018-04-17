@@ -1,0 +1,725 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+
+    <form [formGroup]="addForm" (ngSubmit)="addHistory()"  class="col-12" method="post">
+
+        <div class='row'>
+            <div class='col-12'>
+            </div>
+        </div>
+        <h2>Historia Psicosocial y del Desarrollo</h2>
+        <!--Historia Psicosocial y del Desarrollo-->
+        <div class='row form-group'>
+            <div class='input-field col-12 left-align'>
+                <h4 class="text-info" for="historia_psicosocial_y_del_desarrollo">Historia Psicosocial y del Desarrollo</h4>
+                <p style="text-align: justify;">Etapas de la vida del paciente, acontecimientos del desarrollo y patrones de respuesta a las transiciones normales de la vida y eventos mayores. Educación e influencias culturales y religiosas. Antecedentes de criminalidad, historia sexual, historia de cualquier abuso o trauma físico, emocional o sexual. Experiencias de represión política, guerra o desastres naturales. Evaluación del nivel de funcionamiento pasado y presente en roles familiares y sociales, atención que el paciente proporciona a sus hijos. Relaciones familiares y no familiares. Historia ocupacional. Consigne si problemas de salud causaron estrés mayor en el paciente o incapacidad funcional.</p>
+                <textarea class="col-12 text-info" name="historiapsicosocial" id="historiapsicosocial" cols="30" rows="10" formControlName="historia_psicosocial_y_del_desarrollo"></textarea>
+            </div>
+        </div>
+
+        <h2>Historia Clínica Familiar</h2>
+        <p style="text-align: justify;">En caso afirmativo proporcione detalles pertinentes (fechas, gravedad, evolución, localización y tratamientos).</p>
+        <!--SNC y Transtornos Convulsivos-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="snc">SNC (No Psiquiátricas)</h5>
+                <select class="custom-select col-3" name='snc' id='snc' formControlName="snc">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="snc1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='snc1' id='snc1' formControlName="snc1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="trastornos_convulsivos">Trastornos Convulsivos</h5>
+                <select class="custom-select col-3" name='transconv' id='transconv' formControlName="trastornos_convulsivos">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="trastornos_convulsivos1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='transconv1' id='transconv1' formControlName="trastornos_convulsivos1"/>
+            </div>
+        </div>
+
+        <!--Respiratorias y Cardiovasculares-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="respiratorias">Respiratorias</h5>
+                <select class="custom-select col-3" name='respiratorias' id='respiratorias' formControlName="respiratorias">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="respiratorias1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='resp' id='resp' formControlName="respiratorias1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="cardiovasculares">Cardiovasculares</h5>
+                <select class="custom-select col-3" name='transconv' id='transconv' formControlName="cardiovasculares">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="cardiovasculares1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='cardio' id='cardio' formControlName="cardiovasculares1"/>
+            </div>
+        </div>
+
+        <!--Hematopeyáticas/Linfáticas y Ojos/Oídos/Naríz/Garganta-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="hematopoyecticas_linfaticas">Hematopoyéticas/Linfáticas</h5>
+                <select class="custom-select col-3" name='hematopeyicas' id='hematopeyicas' formControlName="hematopoyecticas_linfaticas">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="hematopoyecticas_linfaticas1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='hematopeyicas1' id='hematopeyicas1' formControlName="hematopoyecticas_linfaticas1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="ojos_nariz_oidos_garganta">Ojos/Oídos/Nariz/Garganta</h5>
+                <select class="custom-select col-3" name='ojos' id='ojos' formControlName="ojos_nariz_oidos_garganta">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="ojos_nariz_oidos_garganta1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='ojos1' id='ojos1' formControlName="ojos_nariz_oidos_garganta1"/>
+            </div>
+        </div>
+
+        <!--Hepáticas y Dermatológicas/Tejido Conectivo-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="hepaticas">Hepáticas</h5>
+                <select class="custom-select col-3" name='hepatica' id='hepatica' formControlName="hepaticas">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="hepaticas1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='hepatica1' id='hepatica1' formControlName="hepaticas1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="dermatologicas_tejido_conectivo">Dermatológicas/Conectivo</h5>
+                <select class="custom-select col-3" name='derma' id='derma' formControlName="dermatologicas_tejido_conectivo">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="dermatologicas_tejido_conectivo1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='derma1' id='derma1' formControlName="dermatologicas_tejido_conectivo1"/>
+            </div>
+        </div>
+
+        <!--Músculo-Esqueléticas y Endocrinas/Metabólicas-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="musculo_esqueleticas">Músculo-Esqueléticas</h5>
+                <select class="custom-select col-3" name='musculo' id='musculo' formControlName="musculo_esqueleticas">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="musculo_esqueleticas1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='musculo1' id='musculo1' formControlName="musculo_esqueleticas1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="endocrinas_metabolicas">Endocrinas/Metabólicas</h5>
+                <select class="custom-select col-3" name='endo' id='endo' formControlName="endocrinas_metabolicas">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="endocrinas_metabolicas1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='endo1' id='endo1' formControlName="endocrinas_metabolicas1"/>
+            </div>
+        </div>        
+
+        <!--Gastrointestinales y Renales/Genitourinarias-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="gastrointestinales">Gastrointestinales</h5>
+                <select class="custom-select col-3" name='gastro' id='gastro' formControlName="gastrointestinales">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="gastrointestinales1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='gastro1' id='gastro1' formControlName="gastrointestinales1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="renales_genitourinarias">Renales/Genitourinarias</h5>
+                <select class="custom-select col-3" name='renal' id='renal' formControlName="renales_genitourinarias">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="renales_genitourinarias1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='renal1' id='renal1' formControlName="renales_genitourinarias1"/>
+            </div>
+        </div>    
+
+        <!--Cáncer y Alergia o Hipersensibilidad a Medicamentos-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="cancer">Cáncer</h5>
+                <select class="custom-select col-3" name='cancer' id='cancer' formControlName="cancer">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="cancer1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='cancer1' id='cancer1' formControlName="cancer1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="alergia_hipersensibilidad_a_medicamentos">Alergia a Medicamento</h5>
+                <select class="custom-select col-3" name='alergia' id='alergia' formControlName="alergia_hipersensibilidad_a_medicamentos">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="alergia_hipersensibilidad_a_medicamentos1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='alergia1' id='alergia1' formControlName="alergia_hipersensibilidad_a_medicamentos1"/>
+            </div>
+        </div>  
+
+        <!--Intervenciones Quirúrgicas Mayores Previas-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h5 class="text-info" for="intervenciones_quirurgicas_mayores">Intervenciones Quirúrgicas Mayores Previas</h5>
+                <select class="custom-select col-6" name='intmayores' id='intmayores' formControlName="intervenciones_quirurgicas_mayores">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-6 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="intervenciones_quirurgicas_mayores1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='intmayores1' id='intmayores1' formControlName="intervenciones_quirurgicas_mayores1"/>
+            </div>
+        </div>
+
+        <!--Intervenciones Quirúrgicas Programadas-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h5 class="text-info" for="intervenciones_quirurgicas_programadas">Intervenciones Quirúrgicas Programadas</h5>
+                <select class="custom-select col-6" name='intprogra' id='intprogra' formControlName="intervenciones_quirurgicas_programadas">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-6 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="intervenciones_quirurgicas_programadas1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='intprogra1' id='intprogra1' formControlName="intervenciones_quirurgicas_programadas1"/>
+            </div>
+        </div>  
+
+        <!--Otro-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h5 class="text-info" for="otros">Otro</h5>
+                <select class="custom-select col-6" name='otro' id='otro' formControlName="otros">
+                        <option default value="Desconocido">Desconocido</option>
+                        <option value="Si">Sí</option>
+                        <option value="No">No</option>
+                </select>
+            </div>
+            <div class='input-field col-6 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="otros1">Comentario (Opcional)</h5>
+                <input placeholder="Comentario" class='text-info form-control' type='text' name='otro1' id='otro1' formControlName="otros1"/>
+            </div>
+        </div>  
+
+        <h2>Exploración Física</h2>
+        <!--Condición General y Piel-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="condicion_general">Condición General</h5>
+                <select class="custom-select col-3" name='condgeneral' id='condgeneral' formControlName="condicion_general">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="condicion_general1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='condgeneral1' id='condgeneral1' formControlName="condicion_general1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="piel">Piel</h5>
+                <select class="custom-select col-3" name='piel' id='piel' formControlName="piel">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="piel1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='piel1' id='piel1' formControlName="piel1"/>
+            </div>
+        </div>  
+
+        <!--Cabeza y Ojos-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="cabeza">Cabeza</h5>
+                <select class="custom-select col-3" name='cabeza' id='cabeza' formControlName="cabeza">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="cabeza1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='cabeza1' id='cabeza1' formControlName="cabeza1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="ojos">Ojos</h5>
+                <select class="custom-select col-3" name='ojos' id='ojos' formControlName="ojos">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="ojos1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='ojos1' id='ojos1' formControlName="ojos1"/>
+            </div>
+        </div>  
+
+        <!--Oído/Nariz/Garganta y Cuello/Tiroides-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="oido_nariz_garganta">Oído/Nariz/Garganta</h5>
+                <select class="custom-select col-3" name='ong' id='ong' formControlName="oido_nariz_garganta">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="oido_nariz_garganta1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='ong1' id='ong1' formControlName="oido_nariz_garganta1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="cuello_tiroides">Cuello/Tiroides</h5>
+                <select class="custom-select col-3" name='cuello' id='cuello' formControlName="cuello_tiroides">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="cuello_tiroides1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='cuello1' id='cuello1' formControlName="cuello_tiroides1"/>
+            </div>
+        </div> 
+
+        <!--Pulmones y Corazón-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="pulmones">Pulmones</h5>
+                <select class="custom-select col-3" name='pulmones' id='pulmones' formControlName="pulmones">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="pulmones1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='pulmones1' id='pulmones1' formControlName="pulmones1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="corazon">Corazón</h5>
+                <select class="custom-select col-3" name='corazon' id='corazon' formControlName="corazon">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="corazon1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='corazon1' id='corazon1' formControlName="corazon1"/>
+            </div>
+        </div> 
+
+        <!--Sistema Gastrointestinal y Nódulos Linfáticos-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="sistema_gastrointestinal">Sistema Gastrointestinal</h5>
+                <select class="custom-select col-3" name='sisgastro' id='sisgastro' formControlName="sistema_gastrointestinal">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="sistema_gastrointestinal1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='sisgastro1' id='sisgastro1' formControlName="sistema_gastrointestinal1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="nodulos_linfaticos">Nódulos Linfáticos</h5>
+                <select class="custom-select col-3" name='nodulos' id='nodulos' formControlName="nodulos_linfaticos">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="nodulos_linfaticos1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='nodulos1' id='nodulos1' formControlName="nodulos_linfaticos1"/>
+            </div>
+        </div> 
+
+        <!--Hígado/Vesícula Biliar y Sistema Urogenital-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="higado_vesicula_biliar">Hígado/Vesícula Biliar</h5>
+                <select class="custom-select col-3" name='higado' id='higado' formControlName="higado_vesicula_biliar">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="higado_vesicula_biliar1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='higado1' id='higado1' formControlName="higado_vesicula_biliar1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="sistema_urogenital">Sistema Urogenital</h5>
+                <select class="custom-select col-3" name='urogenital' id='urogenital' formControlName="sistema_urogenital">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="sistema_urogenital1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='urogenital1' id='urogenital1' formControlName="sistema_urogenital1"/>
+            </div>
+        </div> 
+
+        <!--Sistema Músculo Esquelético y Neurológico-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="sistema_musculo_esqueletico">Músculo Esquelético</h5>
+                <select class="custom-select col-3" name='musesq' id='musesq' formControlName="sistema_musculo_esqueletico">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="sistema_musculo_esqueletico1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='musesq1' id='musesq1' formControlName="sistema_musculo_esqueletico1"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="neurologico">Neurológico</h5>
+                <select class="custom-select col-3" name='neuro' id='neuro' formControlName="neurologico">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="neurologico1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='neuro1' id='neuro1' formControlName="neurologico1"/>
+            </div>
+        </div> 
+
+        <!--Otro-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h5 class="text-info" for="otro">Otro</h5>
+                <select class="custom-select col-6" name='otrof' id='otrof' formControlName="otro">
+                        <option default value="Normal">Normal</option>
+                        <option value="Anormal">Anormal</option>
+                        <option value="No Examinado">No Examinado</option>
+                </select>
+            </div>
+            <div class='input-field col-6 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="otro1">Especificar Hallazgos</h5>
+                <input placeholder="Especificar Hallazgos" class='text-info form-control' type='text' name='otrof1' id='otrof1' formControlName="otro1"/>
+            </div>
+        </div>  
+
+        <h2>Historia Psiquiátrica Familiar</h2>
+        <!--Esquizofrenia y Trastorno Bipolar-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="esquizofrenia">Esquizofrenia</h5>
+                <select class="custom-select col-3" name='esquizofrenia' id='esquizofrenia' formControlName="esquizofrenia">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="esquizofrenia_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='esquizofrenia_quien' id='esquizofrenia_quien' formControlName="esquizofrenia_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="trastorno_bipolar">Trastorno Bipolar</h5>
+                <select class="custom-select col-3" name='bipolar' id='bipolar' formControlName="trastorno_bipolar">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="trastorno_bipolar_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='bipolar1' id='bipolar1' formControlName="trastorno_bipolar_quien"/>
+            </div>
+        </div> 
+
+        <!--Alcoholismo y Drogadicción-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="alcoholismo">Alcoholismo</h5>
+                <select class="custom-select col-3" name='alcoholismo' id='alcoholismo' formControlName="alcoholismo">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="alcoholismo_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='alcoholismo_quien' id='alcoholismo_quien' formControlName="alcoholismo_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="drogadiccion">Drogadicción</h5>
+                <select class="custom-select col-3" name='drogadiccion' id='drogadiccion' formControlName="drogadiccion">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="drogadiccion_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='drogadiccion_quien' id='drogadiccion_quien' formControlName="drogadiccion_quien"/>
+            </div>
+        </div> 
+
+        <!--Depresión Mayor y Distimia-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="depresion_mayor">Depresión Mayor</h5>
+                <select class="custom-select col-3" name='depresion' id='depresion' formControlName="depresion_mayor">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="depresion_mayor_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='depresion_quien' id='depresion_quien' formControlName="depresion_mayor_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="distimia">Distimia</h5>
+                <select class="custom-select col-3" name='distimia' id='distimia' formControlName="distimia">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="distimian_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='distimia_quien' id='distimia_quien' formControlName="distimia_quien"/>
+            </div>
+        </div> 
+
+        <!--Ataques de Pánico y Agorafobia-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="ataques_de_panico">Ataques de Pánico</h5>
+                <select class="custom-select col-3" name='panico' id='panico' formControlName="ataques_de_panico">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="ataques_de_panico_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='panico_quien' id='panico_quien' formControlName="ataques_de_panico_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="agorafobia">Agorafobia</h5>
+                <select class="custom-select col-3" name='agorafobia' id='agorafobia' formControlName="agorafobia">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="agorafobia_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='agorafobia_quien' id='agorafobia_quien' formControlName="agorafobia_quien"/>
+            </div>
+        </div> 
+
+        <!--Trastorno Obsesivo-Compulsivo y Fobia Social-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h6 class="text-info" for="trastorno_obsesivo_compulsivo">Trastorno Obsesivo-Compulsivo</h6>
+                <select class="custom-select col-3" name='toc' id='toc' formControlName="trastorno_obsesivo_compulsivo">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="trastorno_obsesivo_compulsivo_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='toc_quien' id='toc_quien' formControlName="trastorno_obsesivo_compulsivo_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="fobia_social">Fobia Social</h5>
+                <select class="custom-select col-3" name='fobia_social' id='fobia_social' formControlName="fobia_social">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="fobia_social_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='fobia_social_quien' id='fobia_social_quien' formControlName="fobia_social_quien"/>
+            </div>
+        </div> 
+
+        <!--Fobia Específica y Ansiedad Generalizada-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="fobia_especifica">Fobia Específica</h5>
+                <select class="custom-select col-3" name='fobia_especifica' id='fobia_especifica' formControlName="fobia_especifica">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="fobia_especifica_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='fobia_especifica_quien' id='fobia_especifica_quien' formControlName="fobia_especifica_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="ansiedad_generalizada">Ansiedad Generalizada</h5>
+                <select class="custom-select col-3" name='ansiedad_generalizada' id='ansiedad_generalizada' formControlName="ansiedad_generalizada">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="ansiedad_generalizada_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='ansiedad_generalizada_quien' id='ansiedad_generalizada_quien' formControlName="ansiedad_generalizada_quien"/>
+            </div>
+        </div> 
+
+        <!--Demencia y Retardo Mental-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="demencia">Demencia</h5>
+                <select class="custom-select col-3" name='demencia' id='demencia' formControlName="demencia">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="demencia_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='demencia_quien' id='demencia_quien' formControlName="demencia_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="retardo_mental">Retardo Mental</h5>
+                <select class="custom-select col-3" name='retardo_mental' id='retardo_mental' formControlName="retardo_mental">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="retardo_mental_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='retardo_mental_quien' id='retardo_mental_quien' formControlName="retardo_mental_quien"/>
+            </div>
+        </div> 
+
+        <!--Trastorno de Personalidad y Otro-->
+        <div class='row form-group'>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="trastorno_de_personalidad">Trastorno de Personalidad</h5>
+                <select class="custom-select col-3" name='trastorno_de_personalidad' id='trastorno_de_personalidad' formControlName="trastorno_de_personalidad">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="trastorno_de_personalidad_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='trastorno_de_personalidad_quien' id='trastorno_de_personalidad_quien' formControlName="trastorno_de_personalidad_quien"/>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 class="text-info" for="otrofam">Otro</h5>
+                <select class="custom-select col-3" name='otrofam' id='otrofam' formControlName="otrofam">
+                        <option default value="No Sabe">No Sabe</option>
+                        <option value="No">No</option>
+                        <option value="Si">Sí</option>
+                </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h5 style="visibility: hidden;" class="text-info" for="otrofam_quien">¿Quién?</h5>
+                <input placeholder="¿Quién? (Familiares)" class='text-info form-control' type='text' name='otrofam_quien' id='otrofam_quien' formControlName="otrofam_quien"/>
+            </div>
+        </div>
+
+        <!--Datos Relevantes de la Historia Familiar-->
+        <div class='row form-group'>
+            <div class='input-field col-12 left-align'>
+                <h4 class="text-info" for="datos_relevantes_historia_familiar">Datos Relevantes de la Historia Familiar</h4>
+                <p style="text-align: justify;">Describa datos relevantes de la historia familiar. Edad de los padres, hermanos e hijos. Enfermedades médicas y causas del fallecimiento si hubo. Relación con los padres, hermanos, pareja e hijos. Antecedentes de abuso físico, psicológico o sexual. FAMILIOGRAMA.</p>
+                <textarea class="col-12 text-info" name="datos_relevantes_historia_familiar" id="datos_relevantes_historia_familiar" cols="30" rows="10" formControlName="datos_relevantes_historia_familiar"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <!-- Botones -->
+        <div class='row'>
+            <div class="col-6 float-left">
+                <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' [routerLink]="['/paciente', patient._id]"> Cancelar </button>
+            </div>
+            <div class="col-6 float-right">
+                <button name='btn_login' id="btn_login" class='col-12 btn btn-info text-light' type="submit"> Registrar </button>
+            </div>
+
+        </div>
+    </form>
+
+</div>

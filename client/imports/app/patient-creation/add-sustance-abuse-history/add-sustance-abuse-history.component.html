@@ -1,0 +1,105 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+        
+            <form [formGroup]="addForm" (ngSubmit)="addSustanceAbuseHistory()"  class="col-12" method="post">
+        
+                <h1>Registrar Abuso de Sustancias</h1>
+        
+                <div class='row'>
+                    <div class='col-12'>
+                    </div>
+                </div>
+                        
+                <!--Abuso de Sustancias-->
+                <div class='row form-group'>
+                    <div class='input-field col-12 left-align'>
+                        <h4 class="text-info">En caso de afirmativo señale si es:</h4>
+                    </div>
+                    <div class="col-4 left-align" *ngFor="let abuse of abuses.controls; let i=index">
+                        <input type="checkbox" [formControl]="abuse" (change)="pastAbusesChange(i, $event.target.checked)">
+                        {{ this.pastAbuses[i].abuso }}
+                        <br>
+                    </div>
+                </div>
+        
+                <div class="row form-group">
+                    <div *ngIf="hasAlcoholAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Alcohol - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_alcohol" id="abuso_alcohol" formControlName="abuso_alcohol">
+                    </div>
+                    <div *ngIf="hasAnfetaminesAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Anfetaminas - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_anfetaminas" id="abuso_anfetaminas" formControlName="abuso_anfetaminas">
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div *ngIf="hasMarijuanaAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Marihuana - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_marihuana" id="abuso_marihuana" formControlName="abuso_marihuana">
+                    </div>
+                    <div *ngIf="hasCocaineCrackAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Cocaína/Crack - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_cocaina_crack" id="abuso_cocaina_crack" formControlName="abuso_cocaina_crack">
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div *ngIf="hasHallucinogensAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Alucinógenos - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_alucionogenos" id="abuso_alucionogenos" formControlName="abuso_alucionogenos">
+                    </div>
+                    <div *ngIf="hasOpiatesHeroineAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Inhalantes - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_inhalantes" id="abuso_inhalantes" formControlName="abuso_inhalantes">
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div *ngIf="hasInhalantsAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Opiáceos/Heroína - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_opiaceos_heroina" id="abuso_opiaceos_heroina" formControlName="abuso_opiaceos_heroina">
+                    </div>
+                    <div *ngIf="hasPCPAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">PCP - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_pcp" id="abuso_pcp" formControlName="abuso_pcp">
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div *ngIf="hasSedativesAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Sedantes/hipnóticos- Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_sedantes_hipnoticos_ansioliticos" id="abuso_sedantes_hipnoticos_ansioliticos" formControlName="abuso_sedantes_hipnoticos_ansioliticos">
+                    </div>
+                    <div *ngIf="hasOthersAbuse" class="input-field col-6 left-align">
+                        <h4 class="text-info">Otros - Actual o anterior</h4>
+                        <input type="text" class="text-info form-control" name="abuso_otros" id="abuso_otros" formControlName="abuso_otros">
+                    </div>
+                </div>
+
+                <div class='row form-group'>
+                    <div class='input-field col-12 left-align'>
+                        <h4>NOTA: Si el paciente consume sustancias describa cantidad, frecuencia, vía de administración; patrón de uso (Ej. episódico vs. continuo; solitario vs. social); consecuencias legales y en función interpersonal; tolerancia y síntomas de abstinencia; cualquier asociación temporal entre el uso de sustancias y la enfermedad psiquiátrica actual.</h4>                        
+                    </div>
+                </div>
+                
+                <div class="row form-group">
+                    <div class="input-field col-12 left-align">
+                        <h4 class="text-info" for="abuso_problemas_consumo_sustancias">Problemas relacionados al consumo de sustancias</h4>
+                        <textarea type="text" class="validate text-info form-control" rows="10" name="abuso_problemas_consumo_sustancias" id="abuso_problemas_consumo_sustancias" formControlName="abuso_problemas_consumo_sustancias">
+                        </textarea>
+                    </div>
+                </div>
+    
+                <!-- Botones -->
+                <div class='row'>
+                    <div class="col-6 float-left">
+                        <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' [routerLink]="['/paciente', patient._id]"> Cancelar </button>
+                    </div>
+                    <div class="col-6 float-right">
+                        <button name='btn_login' id="btn_login" class='col-12 btn btn-info text-light' type="submit"> Registrar </button>
+                    </div>
+        
+                </div>
+            </form>
+        
+        </div>

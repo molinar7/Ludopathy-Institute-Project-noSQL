@@ -1,0 +1,95 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+
+    <form [formGroup]="addForm" (ngSubmit)="addPatient()" class="col-12" method="post">
+
+        <h1>Registrar paciente</h1>
+
+        <div class='row'>
+            <div class='col-12'>
+            </div>
+        </div>
+        <!--Nombre y apellido paterno-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h4 class="text-info" for="name">Nombre(s)</h4>
+                <input placeholder="Nombre(s)" class='validate text-info form-control' type='text' name='name' id='name' formControlName="nombre"
+                />
+            </div>
+            <div class='input-field col-6 left-align'>
+                <h4 class="text-info" for="apellido1">Apellido Paterno</h4>
+                <input placeholder="Apellido paterno" class='validate text-info form-control' type='text' name='apellido1' id='apellido1'
+                    formControlName="apellido_paterno" />
+            </div>
+        </div>
+
+        <!--Apellido materno, sexo y edad-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h4 class="text-info" for="apellido2">Apellido Materno</h4>
+                <input placeholder="Apellido materno" class='validate text-info form-control' type='text' name='apellido2' id='apellido2' formControlName="apellido_materno"
+                />
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h4 class="text-info" for="genero">Género</h4>
+                <select class="custom-select col-3" name='genero' id='genero' formControlName="sexo">
+                        <option default value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                      </select>
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h4 class="text-info" for="edad">Edad</h4>
+                <input placeholder="Edad" class='validate text-info form-control' type='number' name='edad' id='edad' formControlName="edad"
+                />
+            </div>
+        </div>
+
+        <!--Dirección y teléfono-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h4 class="text-info" for="direccion">Dirección</h4>
+                <input placeholder="Dirección" class='validate text-info form-control' type='text' name='direccion' id='direccion' formControlName="direccion"
+                />
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h4 class="text-info" for="telefono">Teléfono</h4>
+                <input placeholder="Teléfono" class='validate text-info form-control' type='text' name='telefono' id='telefono' formControlName="telefono"
+                />
+            </div>
+            <div class='input-field col-3 left-align'>
+                <h4 class="text-info" for="fechanac">Fecha de Nacimiento</h4>
+                <input placeholder="Fecha de nacimiento" class='validate text-info form-control' type='date' name='fechanac' id='fechanac' formControlName="fecha_de_nacimiento" />
+            </div>
+        </div>
+
+        <!--Referido por y lugar de residencia-->
+        <div class='row form-group'>
+            <div class='input-field col-6 left-align'>
+                <h4 class="text-info" for="referido">Referido por</h4>
+                <input placeholder="Referido por" class='validate text-info form-control' type='text' name='referido' id='referido' formControlName="referido_por"
+                />
+            </div>
+            <div class='input-field col-6 left-align'>
+                <h4 class="text-info" for="residencia">Lugar de Residencia</h4>
+                <input placeholder="Lugar de residencia" class='validate text-info form-control' type='text' name='residencia' id='residencia' formControlName="lugar_de_residencia" />
+            </div>
+        </div>
+
+        <!--Motivo de consulta-->
+        <div class='row form-group'>
+            <div class='input-field col-12 left-align'>
+                <h4 class="text-info" for="motivo">Motivo de Consulta</h4>
+                <textarea class="col-12 text-info" name="motivo" id="motivo" cols="30" rows="10" formControlName="motivo_consulta"></textarea>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class='row'>
+            <div class="col-6 float-left">
+                <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' [routerLink]="['/pacientes']">Cancelar</button>
+            </div>
+            <div class="col-6 float-right">
+                <button name='btn_login' id="btn_login" class='col-12 btn btn-info text-light' type="submit">Registrar</button>
+            </div>
+        </div>
+    </form>
+</div>

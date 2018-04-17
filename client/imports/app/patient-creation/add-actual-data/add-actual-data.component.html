@@ -1,0 +1,101 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+
+    <form [formGroup]="addForm" (ngSubmit)="addActualData()" class="col-12" method="post">
+
+        <h1>Registrar Datos del Episodio Actual</h1>
+
+        <div class='row'>
+            <div class='col-12'>
+            </div>
+        </div>
+
+        <div class='row form-group'>
+            <div class='input-field col-12 left-align'>
+                <h4 class="text-info" for="peea">P.E.E.A del problema actual (motivo de consulta)</h4>
+                <p style="text-align: justify;">Describa el problema actual,  evolución cronológica de los síntomas (exacerbaciones o remisiones recientes). Factores que han precipitado, agravado o modificado su enfermedad. (Soluciones intentadas) (Búsqueda de ayuda) (Resultados obtenidos en el pasado) (Elementos que mantienen el problema en el presente).</p>
+                <textarea class="col-12 text-info" name="peea" id="peea" cols="30" rows="10" formControlName="peea"></textarea>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class='input-field col-md-6 left-align'>
+                <h4 class="text-info" for="episodio_actual">El episodio actual es:</h4>
+                <select class="custom-select col-md-6" name='episodio_actual' id='estado_civil' formControlName="episodio_actual">
+                  <option value="Indistinguible del pasado; continuación de una condición de larga  evolución">Indistinguible del pasado; continuación de una condición de larga evolución</option>
+                  <option value="Exacerbación de un trastorno crónico">Exacerbación de un trastorno crónico</option>
+                  <option value="Recurrencia de una condición previa similar">Recurrencia de una condición previa similar</option>
+                  <option value="Significativamente diferente de cualquier condición previa">Significativamente diferente de cualquier condición previa</option>
+                  <option value="Primera aparición sin antecedentes de enfermedades psiquiátricas previas">Primera aparición sin antecedentes de enfermedades psiquiátricas previas</option>
+                </select>
+            </div>
+            <div class="input-field col-md-3 left-align">
+                <h4 class="text-info" for="episodios_previos">Número de episodios previos</h4>
+                <input type="number" class="validate text-info form-control" name="episodios_previos" id="episodios_previos" formControlName="episodios_previos">
+            </div>
+            <div class="input-field col-md-3 left-align">
+                <h4 class="text-info" for="edad_primer_episodio">Edad de inicio del primer episodio</h4>
+                <input type="number" class="validate text-info form-control" name="edad_primer_episodio" id="edad_primer_episodio" formControlName="edad_primer_episodio">
+            </div>
+        </div>
+        
+        <div class="row form-group">
+            <div class='input-field col-md-6 left-align'>
+                <h4 class="text-info" for="inicio_sintomas_episodio_actual">Inicio de los síntomas del episodio actual</h4>
+                <select class="custom-select col-md-6" name='inicio_sintomas_episodio_actual' id='inicio_sintomas_episodio_actual' formControlName="inicio_sintomas_episodio_actual">
+                  <option value="- 1 Semanas">0 – 1 Semanas</option>
+                  <option value="1 – 4 Semanas">1 – 4 Semanas</option>
+                  <option value="5 – 8 Semanas">5 – 8 Semanas</option>
+                  <option value="3 – 6 Meses">3 – 6 Meses</option>
+                  <option value="6 – 12 Meses">6 – 12 Meses</option>
+                  <option value="1 – 2 Años">1 – 2 Años</option>
+                  <option value="2 – 3 Años">2 – 3 Años</option>
+                  <option value="4 – 5 Años">4 – 5 Años</option>
+                  <option value="6 – 10 Años">6 – 10 Años</option>
+                  <option value="mayor a 10 Años">Mayor a 10 Años</option>
+                </select>
+            </div>
+            <div class='input-field col-6 left-align'>
+                <h4 class="text-info" for="fechanac">Fecha probable de inicio del Actual episodio</h4>
+                <input class='validate text-info form-control' type='date' name='fecha_inicio_episodio_actual' id='fecha_inicio_episodio_actual' formControlName="fecha_inicio_episodio_actual" />
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="input-field col-md-12 left-align">
+                <h4 class="text-info">¿Ha Recibido Tratamiento para el Episodio Actual?</h4>
+            </div>
+            <div class="col-md-4 left-align" *ngFor="let treatment of treatments.controls; let i=index">
+                <input type="checkbox" [formControl]="treatment" (change)="pastTreatmentsChange(i, $event.target.checked)">
+                {{ this.pastTreatments[i].treatment }}
+                <br>
+            </div>
+
+            <div *ngIf="otherTreatment" class="input-field col-md-6 left-align">
+                <h4 class="text-info">¿Cual?</h4>
+                <input type="text" class="text-info form-control" name="otro_tratamiento" id="otro_tratamiento" formControlName="otro_tratamiento">
+            </div>
+        </div>
+
+        <div class='row form-group'>
+            <div class='input-field col-12 left-align'>
+                <h4 class="text-info" for="psicofarmacos_episodio_actual">Psicofármacos empleados para el episodio actual:</h4>
+                <textarea class="col-12 text-info" name="psicofarmacos_episodio_actual" id="psicofarmacos_episodio_actual" cols="30" rows="10" formControlName="psicofarmacos_episodio_actual"></textarea>
+            </div>
+        </div>
+        <!-- Botones -->
+        <div class='row'>
+            <div class="col-6 float-left">
+                <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' [routerLink]="['/paciente', patient._id]">
+                            Cancelar
+                </button>
+            </div>
+            <div class="col-6 float-right">
+                <button name='btn_login' id="btn_login" class='col-12 btn btn-info text-light' type="submit">
+                            Registrar
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+</div>

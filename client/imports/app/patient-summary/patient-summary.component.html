@@ -1,0 +1,1199 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+    
+        <h2> Resumen Expediente de {{ patient.datos_personales.nombre }} {{ patient.datos_personales.apellido }}
+        </h2>
+
+        <div class='row'>
+            <div class='col-12'>
+            </div>
+        </div>
+
+        <!-- Datos demográficos -->
+        <h3 class="text-info">Datos Demográficos</h3>
+        
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Ejemplo: </label>
+                {{ patient.datos_gineco_obstetricos.menarca }}
+                
+            </div>
+        </div>
+
+        <hr/>
+        
+        <!-- Episodio actual -->
+        <h3 class="text-info">Episodio Actual</h3>
+        
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Ejemplo: </label>
+                {{ patient.datos_gineco_obstetricos.menarca }}
+            </div>
+        </div>
+
+        <hr/>
+
+        <!-- Historia psiquiátrica -->
+        <h3 class="text-info">Historia Psiquiátrica</h3>
+        
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Ejemplo: </label>
+                {{ patient.datos_gineco_obstetricos.menarca }}
+            </div>
+        </div>
+
+        <hr/>
+
+        <!-- Antecedentes personales patológicos y no patológicos -->
+        <h3 class="text-info">Antecedentes Personales Patológicos y No Patológicos</h3>
+        <h4>Historia Clínica General</h4>
+        
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Del SNC: </label>
+                {{ patient.datos_antecedentes_patologicos.snc }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Trastornos Convulsivos: </label>
+                {{ patient.datos_antecedentes_patologicos.trastornos_convulsivos }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Respiratorias: </label>
+                {{ patient.datos_antecedentes_patologicos.respiratorias }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Cardiovasculares: </label>
+                {{ patient.datos_antecedentes_patologicos.cardiovasculares }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Hematopoyéticas/Linfáticas: </label>
+                {{ patient.datos_antecedentes_patologicos.hematopoyecticas_linfaticas }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">De Ojos/Oídos/Nariz/Garganta: </label>
+                {{ patient.datos_antecedentes_patologicos.ojos_nariz_oidos_garganta }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Hepáticas: </label>
+                {{ patient.datos_antecedentes_patologicos.hepaticas }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Dermatológicas/del Tejido Conectivo: </label>
+                {{ patient.datos_antecedentes_patologicos.dermatologicas_tejido_conectivo }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Músculo-Esqueléticas: </label>
+                {{ patient.datos_antecedentes_patologicos.musculo_esqueleticas }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Endocrinas/Metabólicas: </label>
+                {{ patient.datos_antecedentes_patologicos.endocrinas_metabolicas }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Gastrointestinales: </label>
+                {{ patient.datos_antecedentes_patologicos.gastrointestinales }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Renales/Genitourinarias: </label>
+                {{ patient.datos_antecedentes_patologicos.renales_genitourinarias }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Cáncer: </label>
+                {{ patient.datos_antecedentes_patologicos.cancer }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Alergia o Hipersensibilidad a Medicamentos: </label>
+                {{ patient.datos_antecedentes_patologicos.alergia_hipersensibilidad_a_medicamentos }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Intervencones Quirúrgicas Mayores: </label>
+                {{ patient.datos_antecedentes_patologicos.intervenciones_quirurgicas_mayores }}
+            </div>
+        
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Otro: </label>
+                {{ patient.datos_antecedentes_patologicos.otros }}
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <h4>Notas de Antecedentes Personales Patológicos y No Patológicos: </h4>
+                {{ patient.datos_antecedentes_patologicos.notas_antecedentes_personales_patologicos_y_no_patologicos }}
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">¿Toma café o té negro?: </label>
+                {{ patient.datos_antecedentes_patologicos.toma_cafe }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">No. de tazas al día: </label>
+                {{ patient.datos_antecedentes_patologicos.tazas_de_cafe }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tabaquismo: </label>
+                {{ patient.datos_antecedentes_patologicos.tabaquismo }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Consumo diario de tabaco: </label>
+                {{ patient.datos_antecedentes_patologicos.consumo_diario_tabaco }}
+            </div>
+                <div class='input-field col-12 left-align'>
+                <label class="text-info">Años del tabaquismo: </label>
+                {{ patient.datos_antecedentes_patologicos.anos_tabaquismo }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Edad de Inicio: </label>
+                {{ patient.datos_antecedentes_patologicos.edad_inicio }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Edad en que se suspendió: </label>
+                {{ patient.datos_antecedentes_patologicos.edad_suspension }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Bebidas Alcohólicas: </label>
+                {{ patient.datos_antecedentes_patologicos.bebidas_alcoholicas }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Frecuencia y cantidad (cuando toma): </label>
+                {{ patient.datos_antecedentes_patologicos.frecuencia_y_cantidad }}
+            </div>
+        </div>
+        <h4>Si tiene dudas sobre Alcoholismo pregunte (CAGE modificado)</h4>
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">¿Alguna vez le dijeron o sintió que debería dejar de tomar?: </label>
+                {{ patient.datos_antecedentes_patologicos.sintio_dejar_de_tomar }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">¿Alguna vez se sintió mal o culpable por su forma de tomar?: </label>
+                {{ patient.datos_antecedentes_patologicos.sintio_culpable_forma_tomar }}
+            </div>
+                <div class='input-field col-12 left-align'>
+                <label class="text-info">¿Alguna vez tomó en la mañana para calmar sus nervios o cortar la cruda?: </label>
+                {{ patient.datos_antecedentes_patologicos.calmar_nervios_cortar_cruda }}
+            </div>
+        </div>
+
+        <hr/>
+
+        <!-- Historia de abuso de sustancias -->
+        <h3 class="text-info">Historia de Abuso de Sustancias</h3>
+        
+        <h4>El Paciente Tiene los Siguientes Abusos de Sustancias:</h4>
+        
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align' *ngIf="hasAlcoholAbuse">
+                <label class="text-info">Alcohol: </label>
+                {{ patient.datos_abuso_sustancias.abusos[0] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasAnfetaminesAbuse">
+                <label class="text-info">Anfetaminas: </label>
+                {{ patient.datos_abuso_sustancias.abusos[1] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasMarijuanaAbuse">
+                <label class="text-info">Marihuana: </label>
+                {{ patient.datos_abuso_sustancias.abusos[2] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasCocaineCrackAbuse">
+                <label class="text-info">Cocaína/Crack: </label>
+                {{ patient.datos_abuso_sustancias.abusos[3] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasHallucinogensAbuse">
+                <label class="text-info">Alucinógenos: </label>
+                {{ patient.datos_abuso_sustancias.abusos[4] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasInhalantsAbuse">
+                <label class="text-info">Inhalantes: </label>
+                {{ patient.datos_abuso_sustancias.abusos[5] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasOpiatesHeroineAbuse">
+                <label class="text-info">Opiáceos/Heroína: </label>
+                {{ patient.datos_abuso_sustancias.abusos[6] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasPCPAbuse">
+                <label class="text-info">PCP: </label>
+                {{ patient.datos_abuso_sustancias.abusos[7] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasSedativesAbuse">
+                <label class="text-info">Sedantes, Hipnóticos, Ansiolíticos: </label>
+                {{ patient.datos_abuso_sustancias.abusos[8] }}
+            </div>
+            <div class='input-field col-12 left-align' *ngIf="hasSedativesAbuse">
+                <label class="text-info">Otros: </label>
+                {{ patient.datos_abuso_sustancias.abusos[9] }}
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <h4>Problemas Relacionados al Consumo de Sustancias: </h4>
+                {{ patient.datos_abuso_sustancias.abuso_problemas_consumo_sustancias }}
+            </div>
+        </div>
+
+        <hr/>
+
+        <!-- Antecedentes Gineco-obstétricos -->
+        <h3 class="text-info">Antecedentes Gineco-Obstétricos</h3>
+        
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Menarca: </label>
+                {{ patient.datos_gineco_obstetricos.menarca }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">FUM: </label>
+                {{ patient.datos_gineco_obstetricos.fum }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Masculino: </label>
+                {{ patient.datos_gineco_obstetricos.masculino }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Ritmo: </label>
+                {{ patient.datos_gineco_obstetricos.ritmo }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Premenstrual: </label>
+                {{ patient.datos_gineco_obstetricos.tension_premenstrual }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Vida Sexual Activa: </label>
+                {{ patient.datos_gineco_obstetricos.vida_sexual_activa }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">No. de Compañeros Sexuales en su Vida: </label>
+                {{ patient.datos_gineco_obstetricos.num_companeros_sexuales }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <h4>Antecedentes Obstétricos</h4>
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Gesta: </label>
+                {{ patient.datos_gineco_obstetricos.gesta }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Parto Normal: </label>
+                {{ patient.datos_gineco_obstetricos.para }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Cesáreas: </label>
+                {{ patient.datos_gineco_obstetricos.cesareas }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Abortos: </label>
+                {{ patient.datos_gineco_obstetricos.abortos }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">¿Embarazo Actual?: </label>
+                {{ patient.datos_gineco_obstetricos.embarazo_actual }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Lactancia: </label>
+                {{ patient.datos_gineco_obstetricos.lactancia }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">¿Posibilidad de Embarazo?: </label>
+                {{ patient.datos_gineco_obstetricos.posibilidad_de_embarazo }}
+            </div>
+
+            <div class='input-field col-12 left-align'>
+                <h4>¿Utiliza Algún Método Anticonceptivo?: </h4>
+            </div>
+
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Ritmo: </label>
+                {{ hasRhythm }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Anticonceptivos Orales: </label>
+                {{ hasOralContraceptives }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Inyectables: </label>
+                {{ hasInjectable }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">DIU: </label>
+                {{ hasDIU }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Espermaticidas: </label>
+                {{ hasSpermicide }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Coito interrumpido: </label>
+                {{ hasInterruptedIntercourse }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Preservativo: </label>
+                {{ hasPreservative }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Histerectomía: </label>
+                {{ hasHysterectomy }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Salpingoclasia: </label>
+                {{ hasSalpingo }}
+            </div>
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Menopausia: </label>
+                {{ hasMeno }}
+            </div>
+        </div>
+
+        <hr/>
+        
+
+        <!-- Historia Psicosocial y del Desarrollo -->
+        <h3 class="text-info">Historia Psicosocial y del Desarrollo</h3>
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Acontecimientos y Antecedentes: </label>
+                {{ patient.datos_historia.historia_psicosocial_y_del_desarrollo}}
+            </div>
+        </div>     
+        <hr/>
+
+        <!-- Historia Clínica Familiar -->
+        <h3 class="text-info">Historia Clínica Familiar</h3>
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">SNC (No Psiquiátricas): </label>
+                {{ patient.datos_historia.snc}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.snc1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Trastornos Convulsivos: </label>
+                {{ patient.datos_historia.trastornos_convulsivos}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.trastornos_convulsivos1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Respiratorias: </label>
+                {{ patient.datos_historia.respiratorias}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.respiratorias1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Cardiovasculares: </label>
+                {{ patient.datos_historia.cardiovasculares}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.cardiovasculares1}}
+            </div>
+        </div>       
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Hematopoyéticas/Linfáticas: </label>
+                {{ patient.datos_historia.hematopoyecticas_linfaticas}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.hematopoyecticas_linfaticas1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Ojos/Oídos/Nariz/Garganta: </label>
+                {{ patient.datos_historia.ojos_nariz_oidos_garganta}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.ojos_nariz_oidos_garganta1}}
+            </div>
+        </div>     
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Hepáticas: </label>
+                {{ patient.datos_historia.hepaticas}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.hepaticas1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Dermatológicas/Conectivo: </label>
+                {{ patient.datos_historia.dermatologicas_tejido_conectivo}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.dermatologicas_tejido_conectivo1}}
+            </div>
+        </div>   
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Músculo-Esqueléticas: </label>
+                {{ patient.datos_historia.musculo_esqueleticas}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.musculo_esqueleticas1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Endocrinas/Metabólicas: </label>
+                {{ patient.datos_historia.endocrinas_metabolicas}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.endocrinas_metabolicas1}}
+            </div>
+        </div>      
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Gastrointestinales: </label>
+                {{ patient.datos_historia.gastrointestinales}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.gastrointestinales1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Renales/Genitourinarias: </label>
+                {{ patient.datos_historia.renales_genitourinarias}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.renales_genitourinarias1}}
+            </div>
+        </div>            
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Cáncer: </label>
+                {{ patient.datos_historia.cancer}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.cancer1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Alergia a Medicamento: </label>
+                {{ patient.datos_historia.alergia_hipersensibilidad_a_medicamentos}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.alergia_hipersensibilidad_a_medicamentos1}}
+            </div>
+        </div>   
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Intervenciones Quirúrgicas Mayores Previas: </label>
+                {{ patient.datos_historia.intervenciones_quirurgicas_mayores}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.intervenciones_quirurgicas_mayores1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Intervenciones Quirúrgicas Programadas: </label>
+                {{ patient.datos_historia.intervenciones_quirurgicas_programadas}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.intervenciones_quirurgicas_programadas1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Otro: </label>
+                {{ patient.datos_historia.otros}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Comentario: </label>
+                {{ patient.datos_historia.otros1}}
+            </div>
+        </div>  
+
+        <hr/>
+
+        <!-- Exploración Física -->
+        <h3 class="text-info">Exploración Física</h3>
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Condición General: </label>
+                {{ patient.datos_historia.condicion_general}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.condicion_general1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Piel: </label>
+                {{ patient.datos_historia.piel}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.piel1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Cabeza: </label>
+                {{ patient.datos_historia.cabeza}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.cabeza1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Ojos: </label>
+                {{ patient.datos_historia.ojos}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.ojos1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Oído/Nariz/Garganta: </label>
+                {{ patient.datos_historia.oido_nariz_garganta}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.oido_nariz_garganta1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Cuello/Tiroides: </label>
+                {{ patient.datos_historia.cuello_tiroides}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.cuello_tiroides1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Pulmones: </label>
+                {{ patient.datos_historia.pulmones}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.pulmones1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Corazón: </label>
+                {{ patient.datos_historia.corazon}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.corazon1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Sistema Gastrointestinal: </label>
+                {{ patient.datos_historia.sistema_gastrointestinal}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.sistema_gastrointestinal1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Nódulos Linfáticos: </label>
+                {{ patient.datos_historia.nodulos_linfaticos}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.nodulos_linfaticos1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Hígado/Vesícula Biliar: </label>
+                {{ patient.datos_historia.higado_vesicula_biliar}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.higado_vesicula_biliar1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Sistema Urogenital: </label>
+                {{ patient.datos_historia.sistema_urogenital}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.sistema_urogenital1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Músculo Esquelético: </label>
+                {{ patient.datos_historia.sistema_musculo_esqueletico}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.sistema_musculo_esqueletico1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Neurológico: </label>
+                {{ patient.datos_historia.neurologico}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.neurologico1}}
+            </div>
+        </div>  
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Otro: </label>
+                {{ patient.datos_historia.otro}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Especificar Hallazgos: </label>
+                {{ patient.datos_historia.otro1}}
+            </div>
+        </div>  
+
+        <hr/>
+
+        <!-- Historia Psiquiátrica Familiar -->
+        <h3 class="text-info">Historia Psiquiátrica Familiar</h3>
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Esquizofrenia: </label>
+                {{ patient.datos_historia.esquizofrenia}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.esquizofrenia1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Trastorno Bipolar: </label>
+                {{ patient.datos_historia.trastorno_bipolar}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.trastorno_bipolar1}}
+            </div>
+        </div> 
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Alcoholismo: </label>
+                {{ patient.datos_historia.alcoholismo}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.alcoholismo1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Drogadicción: </label>
+                {{ patient.datos_historia.drogadiccion}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.drogadiccion1}}
+            </div>
+        </div> 
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Depresión Mayor: </label>
+                {{ patient.datos_historia.depresion_mayor}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.depresion_mayor1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Distimia: </label>
+                {{ patient.datos_historia.distimia}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.distimia1}}
+            </div>
+        </div> 
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Ataques de Pánico: </label>
+                {{ patient.datos_historia.ataques_de_panico}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.ataques_de_panico1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Agorafobia: </label>
+                {{ patient.datos_historia.agorafobia}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.agorafobia1}}
+            </div>
+        </div> 
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Trastorno Obsesivo-Compulsivo: </label>
+                {{ patient.datos_historia.trastorno_obsesivo_compulsivo}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.trastorno_obsesivo_compulsivo1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Fobia Social: </label>
+                {{ patient.datos_historia.fobia_social}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.fobia_social1}}
+            </div>
+        </div> 
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Fobia Específica: </label>
+                {{ patient.datos_historia.fobia_especifica}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.fobia_especifica1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Ansiedad Generalizada: </label>
+                {{ patient.datos_historia.ansiedad_generalizada}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.ansiedad_generalizada1}}
+            </div>
+        </div> 
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Demencia: </label>
+                {{ patient.datos_historia.demencia}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.demencia1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Retardo Mental: </label>
+                {{ patient.datos_historia.retardo_mental}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.retardo_mental1}}
+            </div>
+        </div> 
+
+        <div class="row form-group">
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Trastorno de Personalidad: </label>
+                {{ patient.datos_historia.trastorno_de_personalidad}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.trastorno_de_personalidad1}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">Otro: </label>
+                {{ patient.datos_historia.otrofam}}
+            </div>
+            <div class='input-field col-3 left-align'>
+                <label class="text-info">¿Quién?: </label>
+                {{ patient.datos_historia.otrofam1}}
+            </div>
+        </div>                 
+        <hr/>
+        
+        <!-- Datos Relevantes de la Historia Familiar -->
+        <h3 class="text-info">Datos Relevantes de la Historia Familiar</h3>    
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Describa datos relevantes de la historia familiar: </label>
+                {{ datos_relevantes_historia_familiar}}
+            </div>
+        </div>                 
+        <hr/>
+
+        <!-- Examen mental -->
+        <h3 class="text-info">Examen Mental</h3>
+        
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Las Escalas Fueron Realizadas Por: </label>
+                {{patient.datos_examen_mental.escalas_realizadas_por}}
+            </div>
+        </div>
+
+
+        <h5>Escalas Opcionales</h5>
+        
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">HAM-D: </label>
+                {{patient.datos_examen_mental.hamd}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">HAM-A: </label>
+                {{patient.datos_examen_mental.hama}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Y-BOCS: </label>
+                {{patient.datos_examen_mental.ybocs}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Q-LES-Q: </label>
+                {{patient.datos_examen_mental.qlesq}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">GADI: </label>
+                {{patient.datos_examen_mental.gadi}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">BDI: </label>
+                {{patient.datos_examen_mental.bdi}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">SPIN: </label>
+                {{patient.datos_examen_mental.spin}}
+            </div>
+        </div>
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">PAS: </label>
+                {{patient.datos_examen_mental.pas}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Descripción Hallazgos: </label>
+                {{patient.datos_examen_mental.descripcion_hallazgos}}
+            </div>
+        </div>
+        <h5>Tensión Arterial Después de Dos Minutos </h5>
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Sistólica Acostado PT: </label>
+                {{patient.datos_examen_mental.tension_sistolica_acostado_PT}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Sistólica Acostado ST: </label>
+                {{patient.datos_examen_mental.tension_sistolica_acostado_ST}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Sistólica Parado PT: </label>
+                {{patient.datos_examen_mental.tension_sistolica_parado_PT}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Sistólica Parado ST: </label>
+                {{patient.datos_examen_mental.tension_sistolica_parado_ST}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Diastólica Acostado PT: </label>
+                {{patient.datos_examen_mental.tension_diastolica_acostado_PT}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Diastólica Acostado ST: </label>
+                {{patient.datos_examen_mental.tension_diastolica_acostado_ST}}
+            </div>
+        </div>
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Diastólica Parado PT: </label>
+                {{patient.datos_examen_mental.tension_diastolica_parado_PT}}
+            </div>
+        </div>
+
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Tensión Diastólica Parado ST: </label>
+                {{patient.datos_examen_mental.tension_diastolica_parado_ST}}
+            </div>
+        </div>
+
+
+        <h5>Frequencia Cardíaca</h5>
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Frecuencia Cardíaca Acostado: </label>
+                {{patient.datos_examen_mental.frecuencia_cardiaca_acostado}}
+            </div>
+        </div>
+
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Frecuencia Cardíaca Parado: </label>
+                {{patient.datos_examen_mental.frecuencia_cardiaca_parado}}
+            </div>
+        </div>
+
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Ritmo Regular: </label>
+                {{patient.datos_examen_mental.ritmo_regular}}
+            </div>
+        </div>
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Ritmo Irregular: </label>
+                {{patient.datos_examen_mental.ritmo_irregular}}
+            </div>
+        </div>
+
+        <h5>Información Sobre Físico</h5>
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Peso: </label>
+                {{patient.datos_examen_mental.peso}}
+            </div>
+        </div>
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Talla: </label>
+                {{patient.datos_examen_mental.talla}}
+            </div>
+        </div>
+
+        
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Circunferencia Abdominal: </label>
+                {{patient.datos_examen_mental.circunferencia_abdominal}}
+            </div>
+        </div>
+
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Temperatura: </label>
+                {{patient.datos_examen_mental.tempertura}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Peso Usual: </label>
+                {{patient.datos_examen_mental.peso_usual}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">IMC: </label>
+                {{patient.datos_examen_mental.imc}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Resultados Laboratorio y Gabinete: </label>
+                {{patient.datos_examen_mental.resultados_laboratorio_y_gabinete}}
+            </div>
+        </div>
+
+        <hr/>
+        
+
+         <!-- Diagnostico y Tratamiento -->
+         <h3 class="text-info">Diagnóstico y Tratamiento</h3>
+         
+
+         <h5>Diagnóstico</h5>
+         <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Primario: </label>
+                {{ patient.datos_diagnostico_tratamiento.primario}}
+            </div>
+        </div>
+
+         <!--  Desplegar información -->
+         <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Secundario: </label>
+                {{ patient.datos_diagnostico_tratamiento.secundario}}
+            </div>
+        </div>
+
+        <h5>Plan de tratamiento</h5>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Seguimiento Farmacológico: </label>
+                {{ patient.datos_diagnostico_tratamiento.seguimiento_farmacologico}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Modalidad Terapéutica: </label>
+                {{ patient.datos_diagnostico_tratamiento.modalidad_terapeutica}}
+            </div>
+        </div>
+
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Pronóstico: </label>
+                {{ patient.datos_diagnostico_tratamiento.pronostico}}
+            </div>
+        </div>
+        <h5>Evaluador</h5>
+        <!--  Desplegar información -->
+        <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Evaluador Nombre: </label>
+                {{ patient.datos_diagnostico_tratamiento.evaluador_nombre}}
+            </div>
+        </div>
+
+         <!--  Desplegar información -->
+         <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Evaluador Categoría: </label>
+                {{ patient.datos_diagnostico_tratamiento.evaluador_categoria}}
+            </div>
+        </div>
+
+         <!--  Desplegar información -->
+         <div class="row form-group">
+            <div class='input-field col-12 left-align'>
+                <label class="text-info">Evaluador Firma: </label>
+                {{ patient.datos_diagnostico_tratamiento.evaluador_firma}}
+            </div>
+        </div>
+        <hr/>
+
+
+        <!-- Botones -->
+        <div class='row'>
+            <div class="col-6 float-left">
+                <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' (click)="cancel()">
+                            Regresar
+                        </button>
+            </div>
+        </div>
+
+</div>

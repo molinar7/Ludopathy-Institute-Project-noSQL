@@ -1,0 +1,208 @@
+<div class="container" style="padding-top:10px; padding-bottom:10px;">
+
+<form [formGroup]="addForm" (ngSubmit)="addExamenMental()"  class="col-12" method="post">
+
+        <h1>Examen Mental</h1>
+        
+        
+       
+        <div class='row form-group'>
+            <div class='col-12 '> <!-- div1-->
+               <p style = "font-size: 12px;">
+                <font size= "3px">Elementos del examen mental:</font>
+                <br> 1. Apariencia general y conducta.
+                <br>  2. Expresión del afecto y humor.
+                <br>  3. Lenguaje y habla (ej. Velocidad, ritmo, estructura, flujo de ideas y rasgos patológicos como tangencialidad, vaguedad, incoherencia o neologismo)
+                <br>  4. Velocidad de movimientos y la presencia de movimientos y posturas sin propósito, repetitivas o inusuales. 
+                <br>  5. Pensamientos y percepciones: 
+                    a) Expresión espontánea de preocupaciones, inquietudes, pensamientos impulsos y experiencias preceptúales.
+                    b) Síntomas cognitivos y preceptúales: alucinaciones, delirios, ideas de referencia, obsesiones y compulsiones.
+                    c) Pensamientos, deseos o impulsos suicidas homicidas, violentos o auto agresivos. Especificar intensidad y qué impide el actuarlos.
+                    <br>  6. Asociaciones: pérdida o idiosincrasia y postulados contradictorios.
+                    <br>  7. Insight.
+                    <br>  8. Estado cognitivo:
+                    a) Nivel de conciencia.
+                    B) Orientación
+                    c) Atención y concentración. 
+                    d) Funciones del lenguaje (nombramiento, fluidez, comprensión, repetición, lectura, escritura). e) Memoria. f) conocimientos generales.
+                    g) Cálculo.
+                    h) Dibujo.
+                    i) Razonamiento abstracto.
+                    j) Funciones ejecutivas (del sistema frontal) (ej. hacer una lista, inhibición de respuestas impulsivas, resistencia a la distracción, reconocer contradicciones).
+                    k) Cualidad del juicio. 
+                </p> 
+            </div>
+
+             <!--Escalas y escalas opcionales-->
+
+            <div class='input-field col-9 left-align'>
+                <h6 class="text-info" for="infoEscalas">Las escalas fueron realizadas por:</h6>
+                <textarea class="col-12 text-secundary" name="escalas" id="escalas" cols="6" rows="13" formControlName="escalas_realizadas_por"></textarea>
+            </div>
+            
+            <div class="col-3 right-align" >
+                    <div>
+                        <h6 for="infoEscalas"> Escalas (Opcionales)</h6>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <th class="text-info" width="100" ><font size="2px">HAM-D</font></th>
+                            <th ><input type="number" class=' text-secondary  form-control'   id='ham-d' formControlName="hamd"></th>
+                        </tr>
+
+                        <tr>
+                            <th class="text-info"><font size="2px">HAM-A</font></th>
+                            <th><input type="number" class=' text-secondary  form-control'   id='ham-a' formControlName="hama"></th>
+                        </tr>
+
+                        <tr>
+                            <th class="text-info"><font size="2px">Y-BOCS</font></th>
+                            <th><input type="number" class=' text-secondary  form-control'   id='ham-a' formControlName="ybocs"></th>
+                        </tr>
+
+                        <tr>
+                            <th class="text-info"><font size="2px">Q-LES-Q</font></th>
+                            <th><input type="number" class='text-secondary  form-control'   id='q-les-q' formControlName="qlesq"></th>
+                        </tr>
+
+                        <tr>
+                            <th class="text-info"><font size="2px">GADI</font></th>
+                            <th><input type="number" class=' text-secondary  form-control'   id='gadi' formControlName="gadi"></th>
+                        </tr>
+                        
+                        <tr>
+                            <th class="text-info"><font size="2px">BDI</font></th>
+                            <th><input type="number" class=' text-secondary  form-control'   id='bdi' formControlName="bdi"></th>
+                        </tr>
+
+                        <tr>
+                            <th class="text-info"><font size="2px">SPIN</font></th>
+                            <th><input type="number" class=' text-secondary  form-control'   id='spin' formControlName="spin"></th>
+                        </tr>
+
+                        <tr>
+                            <th class="text-info"><font size="2px">PAS</font></th>
+                            <th><input type="number" class=' text-secondary form-control'   id='pas' formControlName="pas"></th>
+                        </tr>
+
+                    </table>
+
+            </div>
+            
+            <!-- Descripcion Hallazgos -->
+            <div class='input-field col-7 left-align'>
+                <h6 class="text-info"><br>Descripción de hallazgos físicos o neurológicos que no hayan sido documentados en otra parte de la historia:</h6>
+                <textarea class="col-12 text-secundary" id="descripcion-hallasgos" cols="6" rows="22" formControlName="descripcion_hallazgos"></textarea>
+            </div>
+
+            <div class="col-5" >
+                 <div>
+                     <h6 > <br>Tensión Arterial después de dos minutos: </h6>
+                 </div>
+
+                 <table>
+                     <tr>
+                        
+                        <th></th>
+                        <th class="text-info"><font size="2px">Sistolica</font></th>
+                        <th class="text-info"><font size="2px">Diastolica</font></th>
+                    </tr>
+                    <tr>
+                        <th class="text-info"><font size="1px">Acostado(PT):</font></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionSistolicaAcostadoPT' formControlName= "tension_sistolica_acostado_PT" ></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionDiastolicaAcostadoPT' formControlName= "tension_diastolica_acostado_PT"  ></th>
+                    </tr>
+                    <tr>
+                        <th class="text-info"><font size="1px">Acostado(ST):</font></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionSistolicaAcostadoST' formControlName= "tension_sistolica_acostado_ST"></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionDiastolicaAcostadoST' formControlName= "tension_diastolica_acostado_ST"></th>
+                    </tr>
+                    <tr>
+                        <th class="text-info"><font size="1px">Parado (PT):</font></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionSistolicaParadoPT' formControlName= "tension_sistolica_parado_PT"></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionDiastolicaParadoPT' formControlName= "tension_diastolica_parado_PT"></th>
+                    </tr>
+                    <tr>
+                        <th class="text-info"><font size="1px">Parado (ST):</font></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionSistolicaParadoST' formControlName= "tension_sistolica_parado_ST"></th>
+                        <th><input class='validate text-info form-control' type='number'  id='tensionDiastolicaParadoST' formControlName= "tension_diastolica_parado_ST"></th>
+                    </tr>
+                </table>
+                <!-- Frecuencia Cardiaca -->
+                <div class="col-14">
+                     <h6 > <br>Frecuencia Cardiaca </h6>
+                 
+                <table>
+                    <tr>
+                            <th class="text-info" width="1000"><font size="1px">Acostado después de 5 minutos:</font><th>
+                            <th width="800"><input type="number" class=' text-secondary form-control'   id='freqCardAcostado' formControlName="frecuencia_cardiaca_acostado"> </th>
+                    </tr>
+                    <tr>
+                            <th class="text-info"><font size="1px">Parado después de 2 minutos:</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='freqCardParado' formControlName="frecuencia_cardiaca_parado"></th>
+                    </tr> 
+                    <tr>
+                            <th class="text-info"><font size="1px">Ritmo Regular:</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='ritmoRegular' formControlName="ritmo_regular"></th>
+                    </tr>
+                    <tr>
+                            <th class="text-info"><font size="1px">Ritmo Irregular:</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='ritmoIrregular' formControlName="ritmo_irregular"></th>
+                    </tr>
+                </table>
+            </div>
+                <div>
+                     <h6  > <br> <br>Información sobre físico </h6>
+                 </div>
+                <table>
+                    <tr>
+                            <th class="text-info"><font size="1px">Peso (KGs):</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='pesokg' formControlName="peso"></th>
+                            <th class="text-info"><font size="1px">Talla (CMs):</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='tallacm' formControlName="talla"></th>
+                    </tr>
+                    <tr>
+                            <th class="text-info"><font size="1px">Circunferencia Abdominal (CMs):</font><th>
+                            <th class="text-info"><input type="number" class=' text-secondary form-control'   id='circunferenciaAbs' formControlName="circunferencia_abdominal"></th>
+                            <th class="text-info"><font size="1px">Temperatura(GC):</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='temperaturaGC' formControlName="temperatura"></th>
+                    </tr>
+                    <tr>
+                            <th class="text-info"><font size="1px">Peso Usual:</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='pesoUsual' formControlName="peso_usual"></th>
+                            <th class="text-info" ><font size="1.5px ">IMC:</font><th>
+                            <th><input type="number" class=' text-secondary form-control'   id='indiceMasa' formControlName="imc"></th>
+                    </tr>
+                </table>
+
+                
+            </div>
+            
+            
+        
+        </div>
+
+        <!-- Resultado de estudio de laboratorio y gabinete-->
+        <div class='input-field col-13 left-align'>
+            <h6 class="text-info"><br>Resultados de Estudio de Laboratorio y Gabinete:</h6>
+            <textarea class="col-12 text-secundary" id="laboratorio-gabinete" cols="6" rows="8" formControlName="resultados_laboratorio_y_gabinete"></textarea>
+        </div>
+
+        <!-- Botones -->
+        <div class='row'>
+            <div class="col-6 float-left">
+                <button name='btn_cancel' id="btn_cancel" class='col-12 btn btn-secondary text-light' (click)="cancel()">
+                    Cancelar
+        </button>
+            </div>
+            <div class="col-6 float-right">
+                <button id="btn_continuar" class='col-12 btn btn-info text-light' >
+                            Continuar
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
